@@ -125,16 +125,6 @@ const OnboardingScreen = ({navigation}) => {
         {/* Render buttons */}
         <View style={{marginBottom: 20}}>
           {currentSlideIndex == slides.length - 1 ? (
-            <View style={{height: 50}}>
-              <TouchableOpacity
-                style={styles.btn}
-                onPress={() => navigation.replace('HomeScreen')}>
-                <Text style={{fontWeight: 'bold', fontSize: 15}}>
-                  GET STARTED
-                </Text>
-              </TouchableOpacity>
-            </View>
-          ) : (
             <View style={{flexDirection: 'row'}}>
               <TouchableOpacity
                 activeOpacity={0.8}
@@ -156,6 +146,37 @@ const OnboardingScreen = ({navigation}) => {
                   Back
                 </Text>
               </TouchableOpacity>
+              <View style={{width: 15}} />
+              <TouchableOpacity
+                style={styles.btn}
+                onPress={() => navigation.replace('HomeScreen')}>
+                <Text style={{fontWeight: 'bold', fontSize: 15}}>
+                  GET STARTED
+                </Text>
+              </TouchableOpacity>
+            </View>
+          ) : (
+            <View style={{flexDirection: 'row'}}>
+              {currentSlideIndex != 0 ? <TouchableOpacity
+                activeOpacity={0.8}
+                style={[
+                  styles.btn,
+                  {
+                    borderColor: COLORS.white,
+                    borderWidth: 1,
+                    backgroundColor: 'transparent',
+                  },
+                ]}
+                onPress={goToPreviousSlide}>
+                <Text
+                  style={{
+                    fontWeight: 'bold',
+                    fontSize: 15,
+                    color: COLORS.white,
+                  }}>
+                  Back
+                </Text>
+              </TouchableOpacity> : null}
               <View style={{width: 15}} />
               <TouchableOpacity
                 activeOpacity={0.8}

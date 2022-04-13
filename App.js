@@ -18,6 +18,7 @@ const App = () => {
               name="OnboardingScreen"
               component={OnboardingScreen}
             />
+          <Stack.Screen name="HomeScreen" component={HomeScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     
