@@ -32,7 +32,7 @@ const slides = [
     id: '3',
     image: require('../images/image1.png'),
     title: 'Vibe out without time limits.',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    subtitle: 'Vibe out without time limits.',
   },
   {
     id: '4',
