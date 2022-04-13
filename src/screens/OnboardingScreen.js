@@ -2,6 +2,7 @@ import React from 'react';
 import {
   SafeAreaView,
   Image,
+  ImageBackground,
   StyleSheet,
   FlatList,
   View,
@@ -199,6 +200,8 @@ const OnboardingScreen = ({navigation}) => {
 
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: COLORS.primary}}>
+            <ImageBackground source={require('../images/tutbg.png')} resizeMode="cover" style={styles.image}>
+
       <StatusBar backgroundColor={COLORS.primary} />
       <FlatList
         ref={ref}
@@ -211,6 +214,7 @@ const OnboardingScreen = ({navigation}) => {
         renderItem={({item}) => <Slide item={item} />}
       />
       <Footer />
+      </ImageBackground>
     </SafeAreaView>
   );
 };
