@@ -18,21 +18,27 @@ const COLORS = {primary: '#282534', white: '#fff'};
 const slides = [
   {
     id: '1',
-    image: require('../images/image1.png'),
-    title: 'Best Digital Solution',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    image: require('../images/tut1.png'),
+    title: 'Instant Video Chat!',
+    subtitle: 'Instantly Video Chat in Live Mode.',
   },
   {
     id: '2',
-    image: require('../images/image2.png'),
-    title: 'Achieve Your Goals',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    image: require('../images/image3.png'),
+    title: 'Break the Ice!',
+    subtitle: 'Break the Ice with Games and Prompts.',
   },
   {
     id: '3',
-    image: require('../images/image3.png'),
-    title: 'Increase Your Value',
+    image: require('../images/image1.png'),
+    title: 'Vibe out without time limits.',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  },
+  {
+    id: '4',
+    image: require('../images/tut2.png'),
+    title: 'Classic mode!',
+    subtitle: 'And you can always browse on Classic mode.',
   },
 ];
 
@@ -68,6 +74,16 @@ const OnboardingScreen = ({navigation}) => {
       setCurrentSlideIndex(currentSlideIndex + 1);
     }
   };
+
+  const goToPreviousSlide = () => {
+    const nextSlideIndex = currentSlideIndex - 1;
+    if (nextSlideIndex != -1) {
+      const offset = nextSlideIndex * width;
+      ref?.current.scrollToOffset({offset});
+      setCurrentSlideIndex(currentSlideIndex - 1);
+    }
+  };
+
 
   const skip = () => {
     const lastSlideIndex = slides.length - 1;
@@ -130,14 +146,14 @@ const OnboardingScreen = ({navigation}) => {
                     backgroundColor: 'transparent',
                   },
                 ]}
-                onPress={skip}>
+                onPress={goToPreviousSlide}>
                 <Text
                   style={{
                     fontWeight: 'bold',
                     fontSize: 15,
                     color: COLORS.white,
                   }}>
-                  SKIP
+                  Back
                 </Text>
               </TouchableOpacity>
               <View style={{width: 15}} />
