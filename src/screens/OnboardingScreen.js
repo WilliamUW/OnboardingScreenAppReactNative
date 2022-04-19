@@ -85,7 +85,6 @@ const OnboardingScreen = ({navigation}) => {
     }
   };
 
-
   const skip = () => {
     const lastSlideIndex = slides.length - 1;
     const offset = lastSlideIndex * width;
@@ -97,7 +96,7 @@ const OnboardingScreen = ({navigation}) => {
     return (
       <View
         style={{
-          height: height * 0.25,
+          height: height * 0.20,
           justifyContent: 'space-between',
           paddingHorizontal: 20,
         }}>
@@ -124,7 +123,9 @@ const OnboardingScreen = ({navigation}) => {
         </View>
 
         {/* Render buttons */}
-        <View style={{marginBottom: 20}}>
+        <View style={{
+          marginBottom: 20
+        }}>
           {currentSlideIndex == slides.length - 1 ? (
             <View style={{flexDirection: 'row'}}>
               <TouchableOpacity
@@ -158,26 +159,28 @@ const OnboardingScreen = ({navigation}) => {
             </View>
           ) : (
             <View style={{flexDirection: 'row'}}>
-              {currentSlideIndex != 0 ? <TouchableOpacity
-                activeOpacity={0.8}
-                style={[
-                  styles.btn,
-                  {
-                    borderColor: COLORS.white,
-                    borderWidth: 1,
-                    backgroundColor: 'transparent',
-                  },
-                ]}
-                onPress={goToPreviousSlide}>
-                <Text
-                  style={{
-                    fontWeight: 'bold',
-                    fontSize: 15,
-                    color: COLORS.white,
-                  }}>
-                  Back
-                </Text>
-              </TouchableOpacity> : null}
+              {currentSlideIndex != 0 ? (
+                <TouchableOpacity
+                  activeOpacity={0.8}
+                  style={[
+                    styles.btn,
+                    {
+                      borderColor: COLORS.white,
+                      borderWidth: 1,
+                      backgroundColor: 'transparent',
+                    },
+                  ]}
+                  onPress={goToPreviousSlide}>
+                  <Text
+                    style={{
+                      fontWeight: 'bold',
+                      fontSize: 15,
+                      color: COLORS.white,
+                    }}>
+                    Back
+                  </Text>
+                </TouchableOpacity>
+              ) : null}
               <View style={{width: 15}} />
               <TouchableOpacity
                 activeOpacity={0.8}
@@ -200,20 +203,22 @@ const OnboardingScreen = ({navigation}) => {
 
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: COLORS.primary}}>
-            <ImageBackground source={require('../images/tutbg.png')} resizeMode="cover" style={styles.image}>
-
-      <StatusBar backgroundColor={COLORS.primary} />
-      <FlatList
-        ref={ref}
-        onMomentumScrollEnd={updateCurrentSlideIndex}
-        contentContainerStyle={{height: height * 0.75}}
-        showsHorizontalScrollIndicator={false}
-        horizontal
-        data={slides}
-        pagingEnabled
-        renderItem={({item}) => <Slide item={item} />}
-      />
-      <Footer />
+      <ImageBackground
+        source={require('../images/tutbg.png')}
+        resizeMode="cover"
+        style={styles.image}>
+        <StatusBar backgroundColor={COLORS.primary} />
+        <FlatList
+          ref={ref}
+          onMomentumScrollEnd={updateCurrentSlideIndex}
+          contentContainerStyle={{height: height * 0.75}}
+          showsHorizontalScrollIndicator={false}
+          horizontal
+          data={slides}
+          pagingEnabled
+          renderItem={({item}) => <Slide item={item} />}
+        />
+        <Footer />
       </ImageBackground>
     </SafeAreaView>
   );
