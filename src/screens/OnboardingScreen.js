@@ -208,6 +208,10 @@ const OnboardingScreen = ({navigation}) => {
         resizeMode="cover"
         style={styles.image}>
         <StatusBar backgroundColor={COLORS.primary} />
+        {/* <Image
+        source={require('../images/tut2.png')}
+        //style={{height: '75%', width, resizeMode: 'contain'}}
+      /> */}
         <FlatList
           ref={ref}
           onMomentumScrollEnd={updateCurrentSlideIndex}
