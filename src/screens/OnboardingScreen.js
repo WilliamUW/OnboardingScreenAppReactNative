@@ -44,13 +44,15 @@ const slides = [
 ];
 
 const Slide = ({item}) => {
+  // console.log(width);
+
   return (
     <View style={{alignItems: 'center'}}>
       <Image
         source={item?.image}
         style={{height: '75%', width, resizeMode: 'contain'}}
       />
-      <View>
+      <View style={{marginTop: 20}}>
         <Text style={styles.title}>{item?.title}</Text>
         <Text style={styles.subtitle}>{item?.subtitle}</Text>
       </View>
@@ -231,7 +233,7 @@ const OnboardingScreen = ({navigation}) => {
 const styles = StyleSheet.create({
   subtitle: {
     color: COLORS.white,
-    fontSize: 13,
+    fontSize: 15,
     marginTop: 10,
     maxWidth: '70%',
     textAlign: 'center',
@@ -239,7 +241,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: COLORS.white,
-    fontSize: 22,
+    fontSize: 25,
     fontWeight: 'bold',
     marginTop: 20,
     textAlign: 'center',
