@@ -25,21 +25,15 @@ const slides = [
   },
   {
     id: '2',
-    image: require('../images/image3.png'),
+    image: require('../images/tut2_noloop.gif'),
     title: 'Break the Ice!',
     subtitle: 'Break the Ice with Games and Prompts.',
   },
   {
     id: '3',
-    image: require('../images/image1.png'),
-    title: 'Vibe out without time limits.',
-    subtitle: 'Vibe out without time limits.',
-  },
-  {
-    id: '4',
-    image: require('../images/tut2_noloop.gif'),
-    title: 'Classic mode!',
-    subtitle: 'And you can always browse on Classic mode.',
+    image: require('../images/image3.png'),
+    title: 'Vibe out without time limits!',
+    subtitle: 'Instantly chat with your matches. \n Check Vibes In Real Time.',
   },
 ];
 
@@ -233,15 +227,15 @@ const OnboardingScreen = ({navigation}) => {
 const styles = StyleSheet.create({
   subtitle: {
     color: COLORS.white,
-    fontSize: 15,
-    marginTop: 10,
-    maxWidth: '70%',
+    fontSize: 18,
+    marginTop: 20,
+    maxWidth: '100%',
     textAlign: 'center',
-    lineHeight: 23,
+    lineHeight: 30,
   },
   title: {
     color: COLORS.white,
-    fontSize: 25,
+    fontSize: 28,
     fontWeight: 'bold',
     marginTop: 20,
     textAlign: 'center',
