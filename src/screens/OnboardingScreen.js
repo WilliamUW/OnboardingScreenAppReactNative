@@ -19,7 +19,7 @@ const COLORS = {primary: '#282534', white: '#fff'};
 const slides = [
   {
     id: '1',
-    image: require('../images/tut1.png'),
+    image: require('../images/tut1_noloop.gif'),
     title: 'Instant Video Chat!',
     subtitle: 'Instantly Video Chat in Live Mode.',
   },
@@ -37,7 +37,7 @@ const slides = [
   },
   {
     id: '4',
-    image: require('../images/tut2.png'),
+    image: require('../images/tut2_noloop.gif'),
     title: 'Classic mode!',
     subtitle: 'And you can always browse on Classic mode.',
   },
@@ -250,6 +250,8 @@ const styles = StyleSheet.create({
     height: '100%',
     width: '100%',
     resizeMode: 'contain',
+    borderBottomRightRadius: 20,
+    borderBottomLeftRadius: 20,
   },
   indicator: {
     height: 2.5,
