@@ -19,13 +19,13 @@ const COLORS = {primary: '#282534', white: '#fff'};
 const slides = [
   {
     id: '1',
-    image: require('../images/tut1_noloop.gif'),
+    image: require('../images/tut1_loop.gif'),
     title: 'Instant Video Chat!',
     subtitle: 'Instantly video chat in live mode.',
   },
   {
     id: '2',
-    image: require('../images/tut2_noloop.gif'),
+    image: require('../images/tut2_loop.gif'),
     title: 'Break the Ice!',
     subtitle: 'Break the ice with games and prompts.',
   },
