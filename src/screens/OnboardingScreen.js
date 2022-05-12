@@ -21,19 +21,19 @@ const slides = [
     id: '1',
     image: require('../images/tut1_noloop.gif'),
     title: 'Instant Video Chat!',
-    subtitle: 'Instantly Video Chat in Live Mode.',
+    subtitle: 'Instantly video chat in live mode.',
   },
   {
     id: '2',
     image: require('../images/tut2_noloop.gif'),
     title: 'Break the Ice!',
-    subtitle: 'Break the Ice with Games and Prompts.',
+    subtitle: 'Break the ice with games and prompts.',
   },
   {
     id: '3',
     image: require('../images/image3.png'),
     title: 'Vibe out without time limits!',
-    subtitle: 'Instantly chat with your matches. \n Check Vibes In Real Time.',
+    subtitle: 'Instantly chat with your matches. \n Check vibes in real time.',
   },
 ];
 
