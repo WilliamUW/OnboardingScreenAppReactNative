@@ -19,19 +19,19 @@ const COLORS = {primary: '#282534', white: '#fff'};
 const slides = [
   {
     id: '1',
-    image: require('../images/tut1_loop.gif'),
+    image: require('../images/Screen1_Beta.gif'),
     title: 'Instant Video Chat!',
     subtitle: 'Instantly video chat in live mode.',
   },
   {
     id: '2',
-    image: require('../images/tut2_loop.gif'),
+    image: require('../images/Screen2_Beta.gif'),
     title: 'Break the Ice!',
     subtitle: 'Break the ice with games and prompts.',
   },
   {
     id: '3',
-    image: require('../images/image3.png'),
+    image: require('../images/Screen3_Beta.gif'),
     title: 'Vibe out without time limits!',
     subtitle: 'Instantly chat with your matches. \n Check vibes in real time.',
   },
